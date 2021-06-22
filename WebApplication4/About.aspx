@@ -12,6 +12,7 @@
                 </p>
             </div>
         </ItemTemplate>
+
         <AlternatingItemTemplate>
             <div class="alert alert-danger" role="alert">
 
