@@ -17,7 +17,6 @@
             <div class="alert alert-danger" role="alert">
 
                 <h3><%#Eval("Quotes") %></h3>
-
                 <p style="text-align: left; font-style: italic">
                     - <%#Eval("author") %>
                 </p>
