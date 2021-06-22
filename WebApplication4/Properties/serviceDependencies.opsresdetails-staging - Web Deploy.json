@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/runbookdbserver/databases/RunbookDb",
+      "type": "mssql.azure",
+      "connectionId": "RunbookDbConnectionString",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}
