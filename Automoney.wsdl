@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://RedlineApplicationServices.com/CognitionWS/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://RedlineApplicationServices.com/CognitionWS/">
+	<wsdl:types>
+		<s:schema elementFormDefault="qualified" targetNamespace="http://RedlineApplicationServices.com/CognitionWS/">
+			<s:element name="CreditCheck">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="submissionXML" type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="CreditCheckResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="CreditCheckResult" type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="MessageHeader" type="tns:MessageHeader"/>
+			<s:complexType name="MessageHeader">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string"/>
+				</s:sequence>
+				<s:anyAttribute/>
+			</s:complexType>
+			<s:element name="EnquiryCheck">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="enquiryCheckXML" type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="EnquiryCheckResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="EnquiryCheckResult" type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="CheckAddress">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="checkAddressXML" type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="CheckAddressResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="CheckAddressResult" type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="UpdateStatus">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="updateStatusXML" type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="UpdateStatusResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="UpdateStatusResult" type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="Notify">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="notificationRequestXML" type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="NotifyResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="NotifyResult" type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+		</s:schema>
+	</wsdl:types>
+	<wsdl:message name="CreditCheckSoapIn">
+		<wsdl:part name="parameters" element="tns:CreditCheck"/>
+	</wsdl:message>
+	<wsdl:message name="CreditCheckSoapOut">
+		<wsdl:part name="parameters" element="tns:CreditCheckResponse"/>
+	</wsdl:message>
+	<wsdl:message name="CreditCheckMessageHeader">
+		<wsdl:part name="MessageHeader" element="tns:MessageHeader"/>
+	</wsdl:message>
+	<wsdl:message name="EnquiryCheckSoapIn">
+		<wsdl:part name="parameters" element="tns:EnquiryCheck"/>
+	</wsdl:message>
+	<wsdl:message name="EnquiryCheckSoapOut">
+		<wsdl:part name="parameters" element="tns:EnquiryCheckResponse"/>
+	</wsdl:message>
+	<wsdl:message name="EnquiryCheckMessageHeader">
+		<wsdl:part name="MessageHeader" element="tns:MessageHeader"/>
+	</wsdl:message>
+	<wsdl:message name="CheckAddressSoapIn">
+		<wsdl:part name="parameters" element="tns:CheckAddress"/>
+	</wsdl:message>
+	<wsdl:message name="CheckAddressSoapOut">
+		<wsdl:part name="parameters" element="tns:CheckAddressResponse"/>
+	</wsdl:message>
+	<wsdl:message name="CheckAddressMessageHeader">
+		<wsdl:part name="MessageHeader" element="tns:MessageHeader"/>
+	</wsdl:message>
+	<wsdl:message name="UpdateStatusSoapIn">
+		<wsdl:part name="parameters" element="tns:UpdateStatus"/>
+	</wsdl:message>
+	<wsdl:message name="UpdateStatusSoapOut">
+		<wsdl:part name="parameters" element="tns:UpdateStatusResponse"/>
+	</wsdl:message>
+	<wsdl:message name="UpdateStatusMessageHeader">
+		<wsdl:part name="MessageHeader" element="tns:MessageHeader"/>
+	</wsdl:message>
+	<wsdl:message name="NotifySoapIn">
+		<wsdl:part name="parameters" element="tns:Notify"/>
+	</wsdl:message>
+	<wsdl:message name="NotifySoapOut">
+		<wsdl:part name="parameters" element="tns:NotifyResponse"/>
+	</wsdl:message>
+	<wsdl:message name="NotifyMessageHeader">
+		<wsdl:part name="MessageHeader" element="tns:MessageHeader"/>
+	</wsdl:message>
+	<wsdl:portType name="CWSSoap">
+		<wsdl:operation name="CreditCheck">
+			<wsdl:input message="tns:CreditCheckSoapIn"/>
+			<wsdl:output message="tns:CreditCheckSoapOut"/>
+		</wsdl:operation>
+		<wsdl:operation name="EnquiryCheck">
+			<wsdl:input message="tns:EnquiryCheckSoapIn"/>
+			<wsdl:output message="tns:EnquiryCheckSoapOut"/>
+		</wsdl:operation>
+		<wsdl:operation name="CheckAddress">
+			<wsdl:input message="tns:CheckAddressSoapIn"/>
+			<wsdl:output message="tns:CheckAddressSoapOut"/>
+		</wsdl:operation>
+		<wsdl:operation name="UpdateStatus">
+			<wsdl:input message="tns:UpdateStatusSoapIn"/>
+			<wsdl:output message="tns:UpdateStatusSoapOut"/>
+		</wsdl:operation>
+		<wsdl:operation name="Notify">
+			<wsdl:input message="tns:NotifySoapIn"/>
+			<wsdl:output message="tns:NotifySoapOut"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="CWSSoap" type="tns:CWSSoap">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="CreditCheck">
+			<soap:operation soapAction="http://RedlineApplicationServices.com/CognitionWS/CreditCheck" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="tns:CreditCheckMessageHeader" part="MessageHeader" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+				<soap:header message="tns:CreditCheckMessageHeader" part="MessageHeader" use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="EnquiryCheck">
+			<soap:operation soapAction="http://RedlineApplicationServices.com/CognitionWS/EnquiryCheck" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="tns:EnquiryCheckMessageHeader" part="MessageHeader" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+				<soap:header message="tns:EnquiryCheckMessageHeader" part="MessageHeader" use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="CheckAddress">
+			<soap:operation soapAction="http://RedlineApplicationServices.com/CognitionWS/CheckAddress" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="tns:CheckAddressMessageHeader" part="MessageHeader" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+				<soap:header message="tns:CheckAddressMessageHeader" part="MessageHeader" use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="UpdateStatus">
+			<soap:operation soapAction="http://RedlineApplicationServices.com/CognitionWS/UpdateStatus" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="tns:UpdateStatusMessageHeader" part="MessageHeader" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+				<soap:header message="tns:UpdateStatusMessageHeader" part="MessageHeader" use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="Notify">
+			<soap:operation soapAction="http://RedlineApplicationServices.com/CognitionWS/Notify" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+				<soap:header message="tns:NotifyMessageHeader" part="MessageHeader" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+				<soap:header message="tns:NotifyMessageHeader" part="MessageHeader" use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="CWSSoap12" type="tns:CWSSoap">
+		<soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="CreditCheck">
+			<soap12:operation soapAction="http://RedlineApplicationServices.com/CognitionWS/CreditCheck" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+				<soap12:header message="tns:CreditCheckMessageHeader" part="MessageHeader" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+				<soap12:header message="tns:CreditCheckMessageHeader" part="MessageHeader" use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="EnquiryCheck">
+			<soap12:operation soapAction="http://RedlineApplicationServices.com/CognitionWS/EnquiryCheck" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+				<soap12:header message="tns:EnquiryCheckMessageHeader" part="MessageHeader" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+				<soap12:header message="tns:EnquiryCheckMessageHeader" part="MessageHeader" use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="CheckAddress">
+			<soap12:operation soapAction="http://RedlineApplicationServices.com/CognitionWS/CheckAddress" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+				<soap12:header message="tns:CheckAddressMessageHeader" part="MessageHeader" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+				<soap12:header message="tns:CheckAddressMessageHeader" part="MessageHeader" use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="UpdateStatus">
+			<soap12:operation soapAction="http://RedlineApplicationServices.com/CognitionWS/UpdateStatus" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+				<soap12:header message="tns:UpdateStatusMessageHeader" part="MessageHeader" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+				<soap12:header message="tns:UpdateStatusMessageHeader" part="MessageHeader" use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="Notify">
+			<soap12:operation soapAction="http://RedlineApplicationServices.com/CognitionWS/Notify" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+				<soap12:header message="tns:NotifyMessageHeader" part="MessageHeader" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+				<soap12:header message="tns:NotifyMessageHeader" part="MessageHeader" use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="CWS">
+		<wsdl:port name="CWSSoap" binding="tns:CWSSoap">
+			<soap:address location="https://test.redline.co.uk/AUTOMONEY/TRIAL/NewBusinessWS/cws.asmx"/>
+		</wsdl:port>
+		<wsdl:port name="CWSSoap12" binding="tns:CWSSoap12">
+			<soap12:address location="https://test.redline.co.uk/AUTOMONEY/TRIAL/NewBusinessWS/cws.asmx"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
